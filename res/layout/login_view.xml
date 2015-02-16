@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout android:background="@drawable/white"
+ android:padding="30dp" android:orientation="vertical"
+  android:layout_height="match_parent" 
+  android:layout_width="match_parent" 
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView
+     android:background="@drawable/mlogo" 
+     android:layout_height="wrap_content"
+      android:layout_width="wrap_content" 
+      android:layout_gravity="center"/>
+
+<TextView 
+    android:layout_height="wrap_content"
+     android:layout_width="wrap_content" 
+     android:text="@string/textsmart" 
+     android:layout_marginLeft="100dp" 
+     android:id="@+id/textView2"/>
+
+<TextView 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:text="@string/textsecurematernity" 
+    android:layout_marginLeft="60dp" 
+    android:id="@+id/textView3" 
+    android:textColor="@color/blue"/>
+
+<TextView 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:text="@string/textappointrec" 
+    android:layout_marginLeft="40dp" 
+    android:id="@+id/textView4" 
+    android:textColor="@color/blue"/>
+
+<TextView 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:text="@string/main_text" 
+    android:layout_marginLeft="90dp" 
+    android:id="@+id/textView5" 
+    android:textColor="@color/blue" 
+    android:layout_marginBottom="10dp"/>
+<!-- android:text="@string/username_button" --> 
+<EditText  android:id="@+id/userName"
+    android:background="@drawable/button_green"
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:padding="@dimen/padding_small"
+    android:text="admin"
+    android:textSize="@dimen/font_size"
+    android:layout_marginBottom="10dp" 
+    android:inputType="text"> 
+    
+    <requestFocus/>
+    
+    </EditText>
+
+<EditText android:id="@+id/passwordbutton" 
+    android:background="@drawable/button_green" 
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/font_size" 
+    android:layout_width="fill_parent" 
+    android:padding="@dimen/padding_small"
+    android:text=""  
+    android:layout_marginBottom="8dp" 
+    android:inputType="textPassword"/>
+
+
+<Button android:id="@+id/loginButton"
+    android:background="@drawable/button_login" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:textSize="@dimen/font_size"
+    android:text="@string/login_button" 
+    android:layout_marginBottom="30dp"
+    android:padding="@dimen/padding_small"
+    android:onClick="introClick"/>
+
+
+<TextView 
+    android:layout_height="wrap_content"
+	android:layout_width="wrap_content" 
+	android:text="@string/textnmhireland" 
+	android:layout_marginLeft="35dp" 
+	android:id="@+id/textView6" 
+	android:textColor="@color/black" 
+	android:layout_marginBottom="45dp"/>
+
+<Button 
+    android:background="@color/white" 
+    android:padding="0dp" 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:text="@string/textcredits" 
+    android:layout_marginLeft="100dp" 
+    android:id="@+id/button2" 
+    android:textColor="@color/blue" 
+    android:layout_marginBottom="0dp" 
+    android:singleLine="false" 
+    android:password="false" 
+    android:gravity="center_vertical|center_horizontal|bottom|top"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,388 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary1" >
+    
+    <!-- Overall layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="${relativePackage}.${activityClass}"
+    android:orientation="vertical"
+    >
+
+    
+    <!-- Header Box -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/header_box_height"
+        android:background="@color/primary3"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        android:weightSum="1" >
+    
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            
+            android:paddingTop="@dimen/padding_medium"
+            android:gravity="center_horizontal"
+	
+            android:text="@string/view_service_user"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/primary5"
+            />
+
+        <Button android:id="@+id/editUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/button_back"
+            android:drawableTop="@drawable/ic_action_overflow"
+            android:gravity="center_horizontal"
+            android:text="@string/edit_button"
+            android:textColor="@color/primary1"
+            android:textSize="@dimen/font_size"
+            tools:ignore="RtlHardcoded"
+            android:onClick="profileClick" />
+    
+    </LinearLayout>
+    
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center_horizontal"
+
+        android:text="@string/placeholder_service_user_name"
+        android:textSize="@dimen/font_size"
+        android:textColor="@color/primary5"
+        android:textStyle="bold"
+        />
+
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:layout_marginBottom="@dimen/margin_small"
+        android:gravity="center_horizontal"
+        
+        android:text="@string/placeholder_service_user_details"
+        android:textSize="@dimen/font_size"
+        android:textColor="@color/primary5"
+        />
+    
+    
+    <!-- AnteNatal, Personal and PostNatal buttons -->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        
+        android:layout_marginBottom="@dimen/margin_small">
+            
+            <TextView
+                android:layout_width="@dimen/stroke_small"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:background="@color/primary5"
+                tools:ignore="RtlHardcoded" />
+            
+            <Button android:id="@+id/serviceUserAntenatalButton"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:text="@string/info_antenatal"
+                android:textColor="@color/primary5"
+                android:textSize="@dimen/font_size_small"
+                
+                android:background="@drawable/button_blank"
+                android:drawableTop="@drawable/ic_postnatal"
+                android:onClick="profileClick"
+                />
+            
+            <TextView 
+                android:layout_height="match_parent"
+                android:layout_width="@dimen/stroke_small"
+                android:background="@color/primary5"
+                />
+            
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:text="@string/info_personal"
+                android:textColor="@color/primary5"
+                android:textSize="@dimen/font_size_small"
+
+                android:background="@drawable/button_blank"
+                android:drawableTop="@drawable/ic_profile_selected"
+                android:onClick="profileClick"
+                />
+            
+            <TextView 
+                android:layout_height="match_parent"
+                android:layout_width="@dimen/stroke_small"
+                android:background="@color/primary5"
+                />
+                        
+            <Button android:id="@+id/serviceUserPostnatal"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:text="@string/info_postnatal"
+                android:textColor="@color/primary5"
+                android:textSize="@dimen/font_size_small"
+
+                android:background="@drawable/button_blank"
+                android:drawableTop="@drawable/ic_antenatal"
+                android:onClick="profileClick"
+                />
+            
+            <TextView
+                android:layout_width="@dimen/stroke_small"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/primary5"
+                tools:ignore="RtlHardcoded" />
+            
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_height="@dimen/stroke_small"
+        android:layout_width="match_parent"
+        
+        android:background="@color/primary5"
+        
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        />
+    
+
+    
+    <!-- Layout of different info areas -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <!-- Overall Contact Layout-->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" 
+
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            
+            android:layout_margin="@dimen/margin_small"
+            android:layout_weight="0.25"
+            
+            android:drawableTop="@drawable/ic_contact"
+            android:text="@string/info_contact"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small"
+            android:gravity="center_horizontal"
+            />
+        
+        <!-- Contact Text Layout -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75" 
+
+            android:padding="@dimen/padding_small"
+            android:orientation="vertical"
+            >
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_patientnumber"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_email"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_phonenumber"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+                    
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_secondary_phonenumber"
+            android:textColor="@color/primary3"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="italic" />
+
+        </LinearLayout>
+        </LinearLayout>
+        
+        
+        
+        <!-- Divider -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/primary5" />
+
+        <!-- Overall Address section -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" 
+            android:weightSum="1"
+
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+
+            android:layout_margin="@dimen/margin_small"
+            android:layout_weight="0.25"
+            
+
+            android:drawableTop="@drawable/ic_address"
+            android:gravity="center_horizontal"
+            android:text="@string/info_address"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+
+        <!-- Address Text Layout -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75" 
+
+            android:padding="@dimen/padding_small"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hometype_apartment"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_address"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+
+        </LinearLayout>
+        </LinearLayout>
+        
+        
+        
+        <!-- Divider -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stroke_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/primary5" />
+
+        <!-- Next of Kin section -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_nextofkin"
+            android:gravity="center_horizontal"
+            android:text="@string/info_nextkin"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+        
+        <!-- Address Text Layout -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75" 
+
+            android:padding="@dimen/padding_small"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_nextkin_name"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_nextkin_phonenumber"
+            android:textColor="@color/primary5"
+            android:textSize="@dimen/font_size_small" />
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <Button android:id="@+id/bookAppointment"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        
+        android:padding="@dimen/padding_medium"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small"
+        
+        android:background="@color/light_blue"
+        android:text="@string/book_appointment_button"
+        android:textColor="@color/primary5"
+        android:textSize="@dimen/font_size"
+        android:onClick="profileClick"
+        />
+    
+</LinearLayout>
+</ScrollView>

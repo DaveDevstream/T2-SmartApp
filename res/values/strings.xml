@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SMART App</string>
+    <string name="view_appointments">View Appointments</string>
+    <string name="view_clinics">Clinics</string>
+    <string name="view_clinic_dates">Clinic Dates</string>
+    <string name="view_appointment_calendar">Appointment Calendar</string>
+    <string name="view_service_user">Service User</string>
+    <string name="select_calendar">Select the appropriate calendar</string>
+    <string name="select_domino_clinic">Select the Domino(Dublin) clinic you\'d like to view:</string>
+    <string name="clinics">Clinics\n(Ante-Natal)</string>
+    <string name="visits">Visits\n(Post-Natal)</string>
+    <string name="clinic_NMH_OPD_desc">NMH (OPD Location)\n\t-Evening Booking Clinic\n\t-Weekly, Monday</string>
+    <string name="clinic_Leopardstown_desc">Leopardstown\n\t-Weekly, Tuesday</string>
+    <string name="clinic_DunLaoghaire_desc">Dún Laoghaire\n\t-St. Micheal\'s Hospital\n\t-Weekly, Wednesday</string>
+    <string name="clinic_Churchtown_desc">Churchtown\n\t-Weekly, Thursday</string>
+    <string name="clinic_NMH_desc">NMH\n\t-Weekly, Friday</string>
+    <string name="clinic_Home_Visits_desc">Home Visits\n\t-Miscellaneous\n\t-Daily</string>
+    <string name="clinic_NMH_OPD">NMH (OPD Location)</string>
+    <string name="clinic_Leopardstown">Leopardstown</string>
+    <string name="clinic_DunLaoghaire">Dún Laoghaire</string>
+    <string name="clinic_Churchtown">Churchtown</string>
+    <string name="clinic_NMH">NMH</string>
+    <string name="clinic_Home_Visits">Home Visits</string>
+    <string name="week1">Week 1\n(placeholder for the date to go)</string>
+    <string name="week2">Week 2\n(the date needs to be added in code)</string>
+    <string name="week3">Week 3\n(in order to be up to date)</string>
+    <string name="week4">Week 4\n</string>
+    <string name="week5">Week 5\n</string>
+    <string name="week6">Week 6\n</string>
+    <string name="later">Later dates: </string>
+    <string name="prev_week">&lt; Prev.</string>
+    <string name="next_week">Next &gt;</string>
+    <string name="current_date">&lt;Current Date&gt;</string>
+    <string name="appointment_count">1 Scheduled Appointments</string>
+    <string name="free_appointment">Free Slot</string>
+    <string name="placeholder_appointment">9:15 &lt;Patient Name&gt; 32+3</string>
+    <string name="placeholder_notice">&lt;Notice&gt;</string>
+    <string name="placeholder_warning">&lt;Warning&gt;</string>
+    <string name="info_antenatal">Ante-natal</string>
+    <string name="info_personal">Personal</string>
+    <string name="info_postnatal">Post-natal</string>
+    <string name="info_contact">Contact</string>
+    <string name="info_address">Address</string>
+    <string name="info_nextkin">Next-of-Kin</string>
+    <string name="hometype_apartment">Apartment</string>
+    <string name="hometype_house">House</string>
+    <string name="edit_button">Edit</string>
+    <string name="no_secondary_phonenumber">Secondary number not available</string>
+    <string name="book_appointment_button">Book Appointment</string>
+    <string name="placeholder_service_user_name">&lt; Service User Name &gt;</string>
+    <string name="placeholder_service_user_details">&lt; Service User Details &gt;</string>
+    <string name="placeholder_patientnumber">H12345678</string>
+    <string name="placeholder_email">imafakeemail@email.com</string>
+    <string name="placeholder_phonenumber">+353 871234567</string>
+    <string name="placeholder_address">123 Fake Street, Really long additional line, mostly to test text wrapping, Dublin 7</string>
+    <string name="placeholder_nextkin_name">&lt; Next of Kin Name &gt;</string>
+    <string name="placeholder_nextkin_phonenumber">+353 871234567</string>
+    <string name="edd">EDD</string>
+    <string name="gestation">Gestation</string>
+    <string name="parity">Parity</string>
+    <string name="obstetric_history">Obstetric History</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="blood_group_A">A</string>
+    <string name="rhesus_negative">Negative</string>
+    <string name="rhesus">Rhesus</string>
+    <string name="yes">Yes</string>
+    <string name="placeholder_date">99 Oct 2147</string>
+    <string name="placeholder_gestation">24+3</string>
+    <string name="placeholder_parity">0 + 1</string>
+    <string name="mother">Mother</string>
+    <string name="birth_mode">Birth Mode</string>
+    <string name="birth_mode_ventose">Ventose</string>
+    <string name="perineum">Perineum</string>
+    <string name="anti_D">Anti D</string>
+    <string name="midwife_notes">Midwife Notes</string>
+    <string name="baby">Baby</string>
+    <string name="date_of_delivery">Date of Delivery</string>
+    <string name="time_of_delivery">Time of Delivery</string>
+    <string name="days_since_birth">Days since birth</string>
+    <string name="sex_of_baby">Sex of baby</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birth_weight">Birth weight(kg)</string>
+    <string name="vitk">VitK</string>
+    <string name="vitk_oral">Oral</string>
+    <string name="hearing">Hearing</string>
+    <string name="hearing_declined">Declined</string>
+    <string name="feeding">Feeding</string>
+    <string name="feeding_breast">breast</string>
+    <string name="nbst">NBST</string>
+    <string name="nbst_done">Done</string>
+    <string name="placeholder_perineum">1 degree w/o sutures</string>
+    <string name="placeholder_antiD">To be given</string>
+    <string name="placeholder_time_of_delivery">13:45</string>
+    <string name="placeholder_days_since_birth">5 days</string>
+    <string name="placeholder_birth_weight">2.45</string>
+
+    <!-- Button text -->
+    <string name="service_back">Back</string>
+
+    <!-- <string name=""></string> -->
+    <!-- service_options_view -->
+    <string name="service_header">Service Options</string>
+    <string name="service_direction">Select the Service Options you would like to view:</string>
+    <string name="dublin">Domino (Dublin)</string>
+    <string name="wicklow">Domino (Wicklow)</string>
+    <string name="eth_dublin">ETH (Dublin)</string>
+    <string name="eth_wicklow">ETH (Wicklow)</string>
+    <string name="satellite">Satellite</string>
+    <string name="title_activity_testing">Testing</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- edit_service_user -->
+
+    <string name="editserviceuser1">28 year old (17 Aug 1982)</string>
+    <string name="editserviceuser2">Smachmurh@bannas.com </string>
+    <string name="editserviceuser3">0353876175420 </string>
+    <string name="editserviceuser4">Secondary number</string>
+    <string name="editserviceuser5">Apartment </string>
+    <string name="editserviceuser6">185 the george </string>
+    <string name="editserviceuser7">Charlotte quat dock,</string>
+    <string name="editserviceuser8">Ringsend Road, </string>
+    <string name="editserviceuser9">Dublin 4, </string>
+    <string name="editserviceuser10">John Malony</string>
+    <string name="editserviceuser11">0353876167676</string>
+    <string name="serviceuser">Sarch Maclachlann-Murphy </string>
+    <string name="login_button">LOGIN</string>
+    <string name="username_button"> Username</string>
+    <string name="password_button"> Password</string>
+    <string name="textnmhireland">© national maternity hospitail, ireland</string>
+    <string name="main_text"> TRACKER.</string>
+    <string name="textsmart">SMART</string>
+    <string name="textcredits">About</string>
+    <string name="textsecurematernity">SECURE MATERNITY</string>
+    <string name="textappointrec">APPOINTMENT RECORDING </string>
+    <string name="location">Location </string>
+    <string name="nextofkin">Next Of Kin </string>
+    <string name="testing_git" />
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_calendar_antenatal_clinic_view">MainActivity</string>
+
+    <!-- calendar_antenatal_clinic_view -->
+
+    <string name="header_calendar_antenatal">Select the domino (Wicklow) clinic calendar you\'d like to view</string>
+    <string name="greystones">Greystones\n(Weekly, Monday)</string>
+    <string name="tuesday_1">Greystones\n(Weekly, Tuesday)</string>
+    <string name="kilma">Kilmacanogue\n(Weekly, Thursday)</string>
+    <string name="home_visits">Home Visits\nMiscellaneous\nDaily</string>
+    <string name="title_activity_appoimtment_antenatal_view">MainActivity</string>
+
+    <!-- appointment antenatal -->
+
+    <string name="calendar_antenatal">Select the ETH (Dublin) clinic\ncalendar you\'d like to view: </string>
+    <string name="ballinteer">Ballinteer\nWeekly, Mondayy</string>
+    <string name="dun">Dún Laoghaire\nWeekly, Tuesday</string>
+    <string name="title_activity_satellite_clinic_view">MainActivity</string>
+
+    <!-- satellite clinic -->
+    <string name="satellite_header">Satellite</string>
+    <string name="satellite_select">Select the Satellite clinic you\'d like to view:</string>
+    <string name="arklow">Arklow\n Weekly, Tuesday</string>
+    <string name="newtown">Newtownmountkennedy\ booking clininc\n Weekly, Wednesday</string>
+    <string name="bray">Bray\n Weekly, Thursday</string>
+    <string name="title_activity_apointments_calendar">ApointmentsCalendar</string>
+
+</resources>

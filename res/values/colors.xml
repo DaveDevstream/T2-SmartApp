@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="primary1">#F4F6F8</color>
+    <color name="primary2">#A9B2BE</color>
+    <color name="primary3">#717C7F</color>
+    <color name="primary4">#53575C</color>
+    <color name="primary5">#293138</color>
+
+    <color name="notice">#e4e100</color>
+    <color name="warning">#d11c00</color>
+    
+    <color name="light_blue">#818cfc</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="orange">#ff5500</color>
+
+	<color name="white">#ffffff</color>
+	<color name="green">#5def0d</color>
+
+	<color name="date_color">#999999</color>
+	<color name="black">#000000</color>
+	<color name="blue">#0066cc</color>
+	<color name="lightblue">#b2daf4</color>
+	<color name="gold">#e6b121</color>
+	<color name="blueback">#99FFFF</color>
+	<color name="articlecolor">#3399FF</color>
+	<color name="cachecolor">#8ad0e8</color>
+	<color name="BlueViolet">#8A2BE2</color>
+
+    
+</resources>

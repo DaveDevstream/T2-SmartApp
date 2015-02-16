@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.devstream.smart_app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AntenatalActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AppointmentsActivity"
+            android:screenOrientation="portrait" >
+t
+        </activity>
+        <activity
+            android:name=".Baby"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CalendarsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ClinicDateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ClinicsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PostnatalActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pregnancy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ServiceOptionsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ServiceUser"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditServiceUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CalendarAntenatalClinicViewActivity"
+            android:label="@string/title_activity_calendar_antenatal_clinic_view" >
+        </activity>
+        <activity
+            android:name=".AppoimtmentAntenatalViewActivity"
+            android:label="@string/title_activity_appoimtment_antenatal_view" >
+        </activity>
+        <activity
+            android:name=".SatelliteClinicViewActivity"
+            android:label="@string/title_activity_satellite_clinic_view" >
+        </activity>
+        <activity
+            android:name=".ApointmentsCalendar"
+            android:label="@string/title_activity_apointments_calendar" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scroller" >
+    
+  
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="30dp"
+       >
+
+        
+        <!-- android:background="@drawable/white" -->
+
+        <Button
+            android:id="@+id/done"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:onClick="editUserClick"
+            android:text="Done" />
+        
+        
+
+        <TextView
+            android:id="@+id/textuser1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="45dp"
+            android:text="@string/serviceuser"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edituser1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_green"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edituser2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" />
+
+        <EditText
+            android:id="@+id/edituser3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_green"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser3"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textuser2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edituser4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser4"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/edituser5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser5"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" />
+
+        <EditText
+            android:id="@+id/edituser6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_green"
+            android:ems="10"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser6"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" >
+
+           
+        </EditText>
+
+        <EditText
+            android:id="@+id/edituser7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:padding="@dimen/padding_small"
+            android:text="@string/editserviceuser7"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" />
+
+        <EditText
+            android:id="@+id/edituser8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_green"
+            android:text="@string/editserviceuser8"
+            android:padding="@dimen/padding_small"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/textuser3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nextofkin"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edituser9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:text="@string/editserviceuser9"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size"
+            android:padding="@dimen/padding_small"
+             />
+
+        <EditText
+            android:id="@+id/edituser10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:text="@string/editserviceuser10"
+            android:textColor="@color/green" 
+            android:textSize="@dimen/font_size"
+            android:padding="@dimen/padding_small"/>
+
+        <EditText
+            android:id="@+id/edituser11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green"
+            android:text="@string/editserviceuser11"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_size"
+            android:padding="@dimen/padding_small" >
+        </EditText>
+        
+    </LinearLayout>
+
+</ScrollView>
