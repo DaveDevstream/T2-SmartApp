@@ -127,15 +127,19 @@
     <string name="editserviceuser10">John Malony</string>
     <string name="editserviceuser11">0353876167676</string>
     <string name="serviceuser">Sarch Maclachlann-Murphy </string>
+    
+    <!-- login_view.xml -->
+    
     <string name="login_button">LOGIN</string>
     <string name="username_button"> Username</string>
     <string name="password_button"> Password</string>
     <string name="textnmhireland">© national maternity hospitail, ireland</string>
-    <string name="main_text"> TRACKER.</string>
-    <string name="textsmart">SMART</string>
+    
+    <string name="textsmart">Smart Secure Maternity Appointment Recording Tracker</string>
     <string name="textcredits">About</string>
-    <string name="textsecurematernity">SECURE MATERNITY</string>
-    <string name="textappointrec">APPOINTMENT RECORDING </string>
+    <string name="logo-cd">Logo for Community Midwives</string>
+   
+    
     <string name="location">Location </string>
     <string name="nextofkin">Next Of Kin </string>
     <string name="testing_git" />
