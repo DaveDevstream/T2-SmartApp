@@ -1,118 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/white"
- 	android:padding="30dp" android:orientation="vertical"
-  android:layout_height="match_parent" 
-  android:layout_width="match_parent" 
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:weightSum="10">
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:weightSum="10" >
 
-<ImageView
-     android:background="@drawable/mlogo" 
-     android:layout_height="wrap_content"
-     android:layout_width="wrap_content" 
-     android:layout_gravity="center"
-    android:layout_weight="1" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/mlogo" />
 
-<TextView 
-    android:layout_height="wrap_content"
-     android:layout_width="wrap_content" 
-     android:text="@string/textsmart"
-    android:layout_gravity="center"
-    android:textColor="@color/blue"
-     android:id="@+id/textView2"
-    android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/textsmart"
+        android:textColor="@color/blue" />
 
-<TextView 
-    android:layout_height="wrap_content" 
-    android:layout_width="wrap_content" 
-    android:text="@string/textsecurematernity"
-    android:layout_gravity="center"
-    android:id="@+id/textView3"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/textsecurematernity"
+        android:textColor="@color/blue" />
 
-    android:textColor="@color/blue"
-    android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/textappointrec"
+        android:textColor="@color/blue" />
 
-<TextView 
-    android:layout_height="wrap_content" 
-    android:layout_width="wrap_content" 
-    android:text="@string/textappointrec"
-    android:layout_gravity="center"
-    android:id="@+id/textView4" 
-    android:textColor="@color/blue"
-    android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/main_text"
+        android:textColor="@color/blue" />
+    <!-- android:text="@string/username_button" -->
 
-<TextView 
-    android:layout_height="wrap_content" 
-    android:layout_width="wrap_content" 
-    android:text="@string/main_text"
-    android:layout_gravity="center"
-    android:id="@+id/textView5" 
-    android:textColor="@color/blue"
-    android:layout_weight="1" />
-<!-- android:text="@string/username_button" --> 
-<EditText  android:id="@+id/userName"
-    android:background="@drawable/button_green"
-    android:layout_height="wrap_content" 
-    android:layout_width="fill_parent" 
-    android:padding="@dimen/padding_small"
-    android:text="admin"
-    android:textSize="@dimen/font_size"
-    android:layout_marginBottom="10dp" 
-    android:inputType="text"
-    android:layout_weight="1">
-    
-    <requestFocus/>
-    
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_green"
+        android:inputType="text"
+        android:padding="@dimen/padding_small"
+        android:text="admin"
+        android:textSize="@dimen/font_size" >
+
+        <requestFocus />
     </EditText>
 
-<EditText android:id="@+id/passwordbutton" 
-    android:background="@drawable/button_green" 
-    android:layout_height="wrap_content"
-    android:textSize="@dimen/font_size" 
-    android:layout_width="fill_parent" 
-    android:padding="@dimen/padding_small"
-    android:text=""  
-    android:layout_marginBottom="8dp" 
-    android:inputType="textPassword"
-    android:layout_weight="1" />
+    <EditText
+        android:id="@+id/passwordbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_green"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding_small"
+        android:text=""
+        android:textSize="@dimen/font_size" />
 
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_login"
+        android:onClick="introClick"
+        android:padding="@dimen/padding_small"
+        android:text="@string/login_button"
+        android:textSize="@dimen/font_size" />
 
-<Button android:id="@+id/loginButton"
-    android:background="@drawable/button_login" 
-    android:layout_height="wrap_content" 
-    android:layout_width="fill_parent" 
-    android:textSize="@dimen/font_size"
-    android:text="@string/login_button"
-    android:layout_marginBottom="30dp"
-    android:padding="@dimen/padding_small"
-    android:onClick="introClick"
-    android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/textnmhireland"
+        android:textColor="@color/black" />
 
-
-<TextView 
-    android:layout_height="wrap_content"
-	android:layout_width="wrap_content" 
-	android:text="@string/textnmhireland"
-    android:layout_gravity="center"
-	android:id="@+id/textView6" 
-	android:textColor="@color/black"
-    android:layout_weight="1" />
-
-<Button 
-    android:background="@color/white" 
-    android:padding="0dp" 
-    android:layout_height="wrap_content" 
-    android:layout_width="wrap_content" 
-    android:text="@string/textcredits"
-    android:layout_gravity="center"
-    android:id="@+id/button2" 
-    android:textColor="@color/blue"
-    android:singleLine="false" 
-    android:password="false"
-    android:layout_weight="1" />
-
-
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="0dp"
+        android:password="false"
+        android:singleLine="false"
+        android:text="@string/textcredits"
+        android:textColor="@color/blue" />
 
 </LinearLayout>
