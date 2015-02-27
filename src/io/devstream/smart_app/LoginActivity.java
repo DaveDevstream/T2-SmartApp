@@ -4,6 +4,7 @@ package io.devstream.smart_app;
 
 
 import java.util.Locale;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -70,9 +71,11 @@ public class LoginActivity extends Activity {
 			}
 
 			protected String doInBackground(String... params) {
-				Token tk = new Token(username, password);
+/*				Token tk = new Token(username, password);
 				tk.getToken();
-				return tk.getResponseCode();
+				return tk.getResponseCode();*/
+				SingletonUser.getSingletonInstance().setAuthToken(HttpAuthClazz.getInstance().getAuthKey());
+				return HttpAuthClazz.getInstance().getResponseCode();
 			}
 
 			@Override
@@ -88,7 +91,7 @@ public class LoginActivity extends Activity {
 				else{
 					SingletonUser.getSingletonInstance().setUsername(etUsername.getText().toString());
 					SingletonUser.getSingletonInstance().setPassword(etUsername.getText().toString());
-					Toast.makeText(LoginActivity.this, "Login Success!", Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this, "Login Success!" + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
 				}
 			}
 		}

@@ -1,7 +1,9 @@
 package io.devstream.smart_app;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -80,6 +82,10 @@ public class Token {
 				sb.append((char) ch);
 			}
 			st = sb.toString();
+			
+			BufferedReader in = new BufferedReader(new InputStreamReader(httpcon.getInputStream()));
+			String input = in.readLine();
+			
 		}
 		catch(IOException e){
 			e.printStackTrace();
