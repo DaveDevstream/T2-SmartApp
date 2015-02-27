@@ -6,7 +6,6 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.HashMap;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,13 +15,14 @@ import android.util.Log;
 public class HttpAuthClazz {
 
 	private static HttpAuthClazz instance;
+	
 	private String authKey;
 	private HttpURLConnection httpcon;
 	private String responseCode;
+		
+	private static final String LOG_IN_URL = EnumCredentials.URL.getCredential()+"login";
 	private final String TAG = "HttpAuthClazz";
-	private static final String LOG_IN_URL = "http://54.72.7.91:8888/login";
-	private static final String URL = EnumCredentials.URL.getCredential()+"login";
-
+	
 	private HttpAuthClazz() {
 	}
 
@@ -37,7 +37,7 @@ public class HttpAuthClazz {
 		return instance;
 	}
 
-	public String getAuthKey() {
+	public String getAuthKey(String username, String password) {
 		try {
 			httpcon = (HttpURLConnection) ((new URL(LOG_IN_URL).openConnection()));
 			URLEncoder.encode(LOG_IN_URL, "UTF-8");
@@ -51,8 +51,8 @@ public class HttpAuthClazz {
 			// String>();
 			JSONObject jsonLogin = new JSONObject();
 			JSONObject credentials = new JSONObject();
-			credentials.put("username", "team_belize");
-			credentials.put("password", "smartappiscoming");
+			credentials.put("username", username);
+			credentials.put("password", password);
 			jsonLogin.put("login", credentials);
 
 			// form request
@@ -78,14 +78,12 @@ public class HttpAuthClazz {
 			httpcon.disconnect();
 			
 			Log.d(TAG,LOG_IN_URL);
-			Log.d(TAG,URL);
 			
 			return authKey;
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

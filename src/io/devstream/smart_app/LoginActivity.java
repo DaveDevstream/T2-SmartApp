@@ -58,9 +58,7 @@ public class LoginActivity extends Activity {
 				setUserNameAndPassword();
 				new LongOperation().execute((String[]) null);
 
-				Intent login = new Intent(LoginActivity.this,
-						CalendarsActivity.class);
-				startActivity(login);
+				
 			}
 
 		}
@@ -71,10 +69,9 @@ public class LoginActivity extends Activity {
 			}
 
 			protected String doInBackground(String... params) {
-/*				Token tk = new Token(username, password);
-				tk.getToken();
-				return tk.getResponseCode();*/
-				SingletonUser.getSingletonInstance().setAuthToken(HttpAuthClazz.getInstance().getAuthKey());
+				String authkey = HttpAuthClazz.getInstance().getAuthKey(username,password);
+				SingletonUser.getSingletonInstance().setAuthToken(authkey);
+				
 				return HttpAuthClazz.getInstance().getResponseCode();
 			}
 
@@ -86,12 +83,15 @@ public class LoginActivity extends Activity {
 			@Override
 			protected void onPostExecute(String result) {
 				if(!result.equals("201")){
-					Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this, "Login Failed, please try again", Toast.LENGTH_LONG).show();
 				}
 				else{
 					SingletonUser.getSingletonInstance().setUsername(etUsername.getText().toString());
 					SingletonUser.getSingletonInstance().setPassword(etUsername.getText().toString());
 					Toast.makeText(LoginActivity.this, "Login Success!" + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
+					
+					Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
+					startActivity(login);
 				}
 			}
 		}
