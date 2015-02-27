@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/mlogo" 
-        android:contentDescription="@string/logo-cd"
+        android:contentDescription="@string/logo_cd"
         />
 
     <TextView
@@ -29,31 +29,30 @@
         android:paddingBottom="10dp"
         />
 
-   
-
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/username"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_green"
         android:inputType="text"
         android:padding="@dimen/padding_small"
-        android:text="admin"
+        android:text="team_belize"
+        android:textColorHint="@color/black"
         android:textSize="@dimen/font_size" >
 
         <requestFocus />
     </EditText>
 
     <EditText
-        android:id="@+id/passwordbutton"
+        android:id="@+id/password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_green"
         android:inputType="textPassword"
         android:padding="@dimen/padding_small"
-        android:text=""
+        android:text="smartappiscoming"
         android:textSize="@dimen/font_size" />
 
     <Button
