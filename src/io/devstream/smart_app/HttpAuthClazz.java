@@ -75,6 +75,11 @@ public class HttpAuthClazz {
 			JSONObject json = new JSONObject(sb.toString());
 
 			authKey = (String) ((JSONObject) json.get("login")).get("token");
+			/*String userId = (String)((JSONObject) json.get("login")).get("id");
+			
+			int id = Integer.parseInt(userId);
+			SingletonUser.getSingletonInstance().setUserId(id);
+			Log.d(TAG,"id = "+ String.valueOf(id));*/
 			httpcon.disconnect();
 			
 			Log.d(TAG,LOG_IN_URL);

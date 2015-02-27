@@ -69,8 +69,11 @@ public class LoginActivity extends Activity {
 			}
 
 			protected String doInBackground(String... params) {
-				String authkey = HttpAuthClazz.getInstance().getAuthKey(username,password);
-				SingletonUser.getSingletonInstance().setAuthToken(authkey);
+				/*String authkey = HttpAuthClazz.getInstance().getAuthKey(username,password);
+				SingletonUser.getSingletonInstance().setAuthToken(authkey);*/
+				
+				SingletonUser.getSingletonInstance().setAuthToken(HttpAuthClazz.getInstance().getAuthKey(username,password));
+				
 				
 				return HttpAuthClazz.getInstance().getResponseCode();
 			}
@@ -88,7 +91,7 @@ public class LoginActivity extends Activity {
 				else{
 					SingletonUser.getSingletonInstance().setUsername(etUsername.getText().toString());
 					SingletonUser.getSingletonInstance().setPassword(etUsername.getText().toString());
-					Toast.makeText(LoginActivity.this, "Login Success!" + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
+					Toast.makeText(LoginActivity.this, "Login Success! \nAuthkey: " + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
 					
 					Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
 					startActivity(login);
