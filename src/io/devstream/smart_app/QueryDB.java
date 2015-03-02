@@ -20,39 +20,53 @@ public class QueryDB {
 	private HttpURLConnection con;
 	private final static String TAG = "QueryDB";
 	StringBuffer response;
+	String jaja;
+	
 	
 	public QueryDB(String query) {
 		this.query = query;
 	}
 	
-	public StringBuffer getResult(){
+	public void getResult(){
 		try {
 			dbLookup = new URL(url+query);
+			Log.d(TAG,dbLookup.toString());
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		new LongOperation().equals(dbLookup);
-		Log.i(TAG,response.toString());
-		return response;
+		Log.d(TAG,"starting LongOperation with "+dbLookup);
+		new LongOperation().execute(dbLookup);
 	}
 	
-	private class LongOperation extends AsyncTask<URL, String, Void> {
+	public String getJaja(){
+		Log.d(TAG,"in getJaja");
+		return jaja;
+	}
+	
+	
+	private class LongOperation extends AsyncTask<URL, String, String> {
 		
 		@Override
 		protected void onPreExecute() {
 			response = new StringBuffer();
+			Log.d(TAG,"in onPreExecute, StringBuffer created");
 		}
 
 		@Override
-		protected Void doInBackground(URL... params) {
+		protected String doInBackground(URL... params) {
+			Log.d(TAG,"in doInBackground");
 			try {
 				con = (HttpURLConnection) params[0].openConnection();
+				Log.d(TAG,params[0]+".openConnection");
 				con.setRequestMethod("GET");
 
 				// add request header
 				con.setRequestProperty("Api-Key", apiKey);
+				Log.d(TAG,"Api-Key: " + apiKey);
+				
 				con.setRequestProperty("Auth-Token", AuthToken);
+				Log.d(TAG,"authtoken: " + AuthToken);
 				
 				int responseCode = con.getResponseCode();
 				Log.d(TAG, "\nSending 'GET' request to URL : " + dbLookup);
@@ -62,15 +76,17 @@ public class QueryDB {
 				
 				String inputLine;
 				while ((inputLine = in.readLine()) != null) {
+					Log.d(TAG,inputLine);
 					publishProgress(inputLine);
 				}
+				Log.d(TAG,"finished for loop");
 				
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return null;
+			return response.toString();
 			
 			
 		}
@@ -78,6 +94,12 @@ public class QueryDB {
 		@Override
 		protected void onProgressUpdate(String... values) {
 			response.append(values[0]);
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			Log.d(TAG,"in onPostExecute");
+			jaja = result;
 		}
 		
 		

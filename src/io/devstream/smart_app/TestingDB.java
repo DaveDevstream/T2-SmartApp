@@ -2,6 +2,7 @@ package io.devstream.smart_app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,8 +32,10 @@ public class TestingDB extends Activity{
 			switch(v.getId()){
 			case R.id.querydb:
 				QueryDB q = new QueryDB("appointments");
-				String temp = q.getResult().toString();
-				tvResult.setText(temp);
+				q.getResult();
+				String hoho = q.getJaja();
+				tvResult.setText(hoho);
+				
 			;break;	
 			}
 			
