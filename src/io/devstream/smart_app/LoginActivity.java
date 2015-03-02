@@ -96,7 +96,10 @@ public class LoginActivity extends Activity {
 					//Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
 					//startActivity(login);
 					
-					Intent dbtest = new Intent(LoginActivity.this, TestingDB.class);
+					//Intent dbtest = new Intent(LoginActivity.this, TestingDB.class);
+					//startActivity(dbtest);
+					
+					Intent dbtest = new Intent(LoginActivity.this, GetAppointmentsActivity.class);
 					startActivity(dbtest);
 				}
 			}

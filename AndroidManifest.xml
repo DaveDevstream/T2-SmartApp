@@ -93,6 +93,10 @@ t
         <activity
             android:name=".TestingDB" >
         </activity>
+            
+        <activity
+            android:name=".GetAppointmentsActivity">
+        </activity>
     </application>
 
 </manifest>
