@@ -90,6 +90,9 @@ t
             android:name=".ApointmentsCalendar"
             android:label="@string/title_activity_apointments_calendar" >
         </activity>
+        <activity
+            android:name=".TestingDB" >
+        </activity>
     </application>
 
 </manifest>

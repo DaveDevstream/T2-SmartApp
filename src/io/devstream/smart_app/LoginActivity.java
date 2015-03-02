@@ -93,8 +93,11 @@ public class LoginActivity extends Activity {
 					SingletonUser.getSingletonInstance().setPassword(etUsername.getText().toString());
 					Toast.makeText(LoginActivity.this, "Login Success! \nAuthkey: " + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
 					
-					Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
-					startActivity(login);
+					//Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
+					//startActivity(login);
+					
+					Intent dbtest = new Intent(LoginActivity.this, TestingDB.class);
+					startActivity(dbtest);
 				}
 			}
 		}
