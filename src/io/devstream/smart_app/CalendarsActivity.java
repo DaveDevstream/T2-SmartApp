@@ -20,6 +20,15 @@ public class CalendarsActivity extends Activity {
 			Intent back = new Intent(CalendarsActivity.this, MainActivity.class);
 			startActivity(back);
 			break;
+		case R.id.clinicsBtn:
+			Intent clinics = new Intent(CalendarsActivity.this, ServiceOptionsActivity.class);
+			startActivity(clinics);
+			break;
+		case R.id.visitBtn:
+			//Intent visits = new Intent(CalendarsActivity.this, )
+			//startActivity(visits);
+			break;
+			default:
 		}
 	}
 

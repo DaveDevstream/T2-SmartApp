@@ -59,11 +59,15 @@ public class LoginActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.loginButton:
 				setUserNameAndPassword();
-				new LongOperation().execute();
+				//new LongOperation().execute();
+				LongOperation task = new LongOperation (CalendarsActivity.class);    
+				task.execute();
 				break;
 			case R.id.test_db_button:
 				setUserNameAndPassword();
-				new LongOperation().execute((String[]) null);
+				//new LongOperation().execute((String[]) null);
+				LongOperation task2 = new LongOperation (GetAppointmentsActivity.class);    
+				task2.execute();
 				break;
 			}
 			
@@ -71,6 +75,16 @@ public class LoginActivity extends Activity {
 		}
 		
 		private class LongOperation extends AsyncTask<String, Void, String> {
+			Class aClass;
+			
+			public LongOperation(Class className){
+				aClass = className;
+			}
+			
+			public LongOperation(){
+				
+			}
+			
 			@Override
 			protected void onPreExecute() {
 			}
@@ -106,7 +120,7 @@ public class LoginActivity extends Activity {
 					//Intent dbtest = new Intent(LoginActivity.this, TestingDB.class);
 					//startActivity(dbtest);
 					
-					Intent dbtest = new Intent(LoginActivity.this, GetAppointmentsActivity.class);
+					Intent dbtest = new Intent(LoginActivity.this, aClass);
 					startActivity(dbtest);
 				}
 			}
