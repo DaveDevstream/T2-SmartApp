@@ -14,15 +14,13 @@ public class PostnatalActivity extends Activity {
 	}
 
 	public void postnatalClick(View v){
-		switch(v.getId()){
-		case R.id.antenatalBtn:
+		int id = v.getId();
+		if (id == R.id.antenatalBtn) {
 			Intent anteBtn = new Intent(PostnatalActivity.this, AntenatalActivity.class);
 			startActivity(anteBtn);
-			break;
-		case R.id.postProfile:
+		} else if (id == R.id.postProfile) {
 			Intent profile = new Intent(PostnatalActivity.this, ServiceUser.class);
 			startActivity(profile);
-			break;
 		}
 	}
 	

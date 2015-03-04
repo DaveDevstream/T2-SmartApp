@@ -19,27 +19,22 @@ public class ServiceUser extends Activity {
     
     //button clicks
     public void profileClick(View v){
-    	switch(v.getId()){
-    	case R.id.editUser:
-    		Intent editIntent = new Intent(ServiceUser.this,EditServiceUserActivity.class);
-    		startActivity(editIntent);
-    		break;
-    	case R.id.bookAppointment:
-    		Intent bookApp = new Intent(ServiceUser.this, AppointmentsActivity.class);
-    		startActivity(bookApp);
-    		break;
-    	case R.id.serviceUserPostnatal:
-    	//	setImageResource=(R.drawable.ic_antenatal_selected);
+    	int id = v.getId();
+		if (id == R.id.editUser) {
+			Intent editIntent = new Intent(ServiceUser.this,EditServiceUserActivity.class);
+			startActivity(editIntent);
+		} else if (id == R.id.bookAppointment) {
+			Intent bookApp = new Intent(ServiceUser.this, AppointmentsActivity.class);
+			startActivity(bookApp);
+		} else if (id == R.id.serviceUserPostnatal) {
+			//	setImageResource=(R.drawable.ic_antenatal_selected);
     		Intent postnatalService = new Intent(ServiceUser.this, PostnatalActivity.class);
-    		startActivity(postnatalService);
-    		break;
-    	case R.id.serviceUserAntenatalButton:
-    		Intent antenatal = new Intent(ServiceUser.this, AntenatalActivity.class);
-    		startActivity(antenatal);
-    		break;
-    		default:
-    			break;
-    	}
+			startActivity(postnatalService);
+		} else if (id == R.id.serviceUserAntenatalButton) {
+			Intent antenatal = new Intent(ServiceUser.this, AntenatalActivity.class);
+			startActivity(antenatal);
+		} else {
+		}
     }
     /**
 

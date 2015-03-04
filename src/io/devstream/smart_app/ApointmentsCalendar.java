@@ -15,11 +15,10 @@ public class ApointmentsCalendar extends Activity {
 	}
 	
 	public void appointmentClick(View v){
-		switch(v.getId()){
-		case R.id.next:
+		int id = v.getId();
+		if (id == R.id.next) {
 			Intent next = new Intent(ApointmentsCalendar.this, AppointmentsActivity.class);
 			startActivity(next);
-			break;
 		}
 	}
 /*

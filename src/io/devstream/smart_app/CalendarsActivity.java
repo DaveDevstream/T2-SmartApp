@@ -15,21 +15,15 @@ public class CalendarsActivity extends Activity {
 		setContentView(R.layout.calendars_view);
 	}
 	public void clicked(View v){
-		switch(v.getId()){
-		case R.id.calBack:
+		int id = v.getId();
+		if (id == R.id.calBack) {
 			Intent back = new Intent(CalendarsActivity.this, MainActivity.class);
 			startActivity(back);
-			break;
-		case R.id.clinicsBtn:
+		} else if (id == R.id.clinicsBtn) {
 			Intent clinics = new Intent(CalendarsActivity.this, ServiceOptionsActivity.class);
 			startActivity(clinics);
-			break;
-		case R.id.visitBtn:
-			//Intent visits = new Intent(CalendarsActivity.this, )
-			//startActivity(visits);
-			break;
-			default:
-			break;
+		} else if (id == R.id.visitBtn) {
+		} else {
 		}
 	}
 

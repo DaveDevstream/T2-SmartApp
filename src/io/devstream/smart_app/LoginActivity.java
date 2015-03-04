@@ -52,13 +52,10 @@ public class LoginActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
-			switch (v.getId()) {
-			case R.id.loginButton:
-				
+			int id = v.getId();
+			if (id == R.id.loginButton) {
 				setUserNameAndPassword();
 				new LongOperation().execute((String[]) null);
-
-				
 			}
 
 		}

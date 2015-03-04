@@ -13,11 +13,10 @@ public class EditServiceUserActivity extends Activity {
 	}
 	
 	public void editUserClick(View v){
-		switch(v.getId()){
-		case R.id.done:
+		int id = v.getId();
+		if (id == R.id.done) {
 			Intent doneIntent = new Intent(EditServiceUserActivity.this, ServiceUser.class);
 			startActivity(doneIntent);
-			break;
 		}
 	}
 

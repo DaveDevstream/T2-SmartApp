@@ -29,14 +29,13 @@ public class TestingDB extends Activity{
 
 		@Override
 		public void onClick(View v) {
-			switch(v.getId()){
-			case R.id.querydb:
+			int id = v.getId();
+			if (id == R.id.querydb) {
 				QueryDB q = new QueryDB("appointments");
 				q.getResult();
 				String hoho = q.getJaja();
 				tvResult.setText(hoho);
-				
-			;break;	
+				;
 			}
 			
 		}

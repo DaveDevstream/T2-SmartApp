@@ -14,17 +14,14 @@ public class AntenatalActivity extends Activity {
 	}
 	
 	public void antenatalClick(View v){
-		switch(v.getId()){
-		case R.id.antenatalProfile:
+		int id = v.getId();
+		if (id == R.id.antenatalProfile) {
 			Intent anteProfile = new Intent(AntenatalActivity.this,ServiceUser.class);
 			startActivity(anteProfile);
-			break;
-		case R.id.postnatalActivity:
+		} else if (id == R.id.postnatalActivity) {
 			Intent postnatal = new Intent(AntenatalActivity.this, PostnatalActivity.class);
 			startActivity(postnatal);
-			break;
-			default:
-				break;
+		} else {
 		}
 	}
 
