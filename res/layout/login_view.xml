@@ -70,7 +70,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_login"
-        android:text="Login to Database test view"
+        android:text="Login to test database"
         android:layout_marginBottom="30dp"
         
         />

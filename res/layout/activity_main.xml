@@ -107,12 +107,7 @@
             android:padding="15dp"
             android:text="app antenatal" />
 
-        <Button
-            android:id="@+id/database_example"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:text="Database Example" />
+        
     </LinearLayout>
 
 </ScrollView>
