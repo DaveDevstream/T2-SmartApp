@@ -27,6 +27,7 @@ public class LoginActivity extends Activity {
 	String username;
 	String password;
 	private Button loginButton;
+	private Button testDB;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,9 @@ public class LoginActivity extends Activity {
 
 		loginButton = (Button)findViewById(R.id.loginButton);
 		loginButton.setOnClickListener(new ClickButtonListener());
+		
+		testDB = (Button)findViewById(R.id.test_db_button);
+		testDB.setOnClickListener(new ClickButtonListener());
 
 		
 		etUsername = (EditText) findViewById(R.id.username);
@@ -55,9 +59,14 @@ public class LoginActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.loginButton:
 				setUserNameAndPassword();
+				new LongOperation().execute();
+				break;
+			case R.id.test_db_button:
+				setUserNameAndPassword();
 				new LongOperation().execute((String[]) null);
 				break;
 			}
+			
 
 		}
 		

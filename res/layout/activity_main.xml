@@ -1,121 +1,118 @@
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <Button
-        android:id="@+id/apt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="6dp"
-        android:layout_y="404dp"
-        android:onClick="callActivity"
-        android:text="appoimtment" />
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/clin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_x="13dp"
-        android:layout_y="12dp"
-        android:onClick="callActivity"
-        android:text="clinic date view" />
+        <Button
+            android:id="@+id/apt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="appoimtment" />
 
-    <Button
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="10dp"
-        android:layout_y="351dp"
-        android:onClick="callActivity"
-        android:text="user profile" />
+        <Button
+            android:id="@+id/clin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="clinic date view" />
 
-    <Button
-        android:id="@+id/clinics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_x="13dp"
-        android:layout_y="119dp"
-        android:onClick="callActivity"
-        android:text="clinics" />
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="user profile" />
 
-    <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="166dp"
-        android:onClick="callActivity"
-        android:text="postnatal" />
+        <Button
+            android:id="@+id/clinics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="clinics" />
 
-    <Button
-        android:id="@+id/cal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:layout_x="15dp"
-        android:layout_y="298dp"
-        android:onClick="callActivity"
-        android:text="calendar" />
+        <Button
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="postnatal" />
 
-    <Button
-        android:id="@+id/userAntenatal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:layout_x="19dp"
-        android:layout_y="68dp"
-        android:onClick="callActivity"
-        android:text=" user antenatal" />
+        <Button
+            android:id="@+id/cal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="calendar" />
 
-    <Button
-        android:id="@+id/serviceOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="20dp"
-        android:layout_y="227dp"
-        android:text="service options" 
-        android:onClick="callActivity"/>
+        <Button
+            android:id="@+id/userAntenatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text=" user antenatal" />
 
-    <Button android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="222dp"
-        android:layout_y="16dp"
-        android:background="#ffffff"
-        android:textColor="#000000"
-        android:text="login"
-        android:onClick="callActivity" />
+        <Button
+            android:id="@+id/serviceOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="service options" />
 
-    <Button
-        android:id="@+id/editUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="132dp"
-        android:layout_y="125dp"
-        android:text="edit service user"
-        android:onClick="callActivity"
-         />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="login"
+            android:textColor="#000000" />
 
-    <Button
-        android:id="@+id/calendarAntenatal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="125dp"
-        android:layout_y="178dp"
-        android:text="calendar antenatal"
-        android:onClick="callActivity" />
+        <Button
+            android:id="@+id/editUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="edit service user" />
 
-    <Button
-        android:id="@+id/appAntenatal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="176dp"
-        android:layout_y="228dp"
-        android:text="app antenatal"
-        android:onClick="callActivity" />
+        <Button
+            android:id="@+id/calendarAntenatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="calendar antenatal" />
 
-</AbsoluteLayout>
+        <Button
+            android:id="@+id/appAntenatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callActivity"
+            android:padding="15dp"
+            android:text="app antenatal" />
+
+        <Button
+            android:id="@+id/database_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Database Example" />
+    </LinearLayout>
+
+</ScrollView>
