@@ -12,6 +12,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.android.volley.toolbox.Volley;
+
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -34,6 +36,7 @@ public class GetAppointmentsActivity extends Activity {
 		Log.d(TAG,"mainList instantiated");
 		mainList.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,new ArrayList<String>()));
 		Log.d(TAG,"about to start LongOperation()");
+
 		new LongOperation().execute("appointments");
 	}
 

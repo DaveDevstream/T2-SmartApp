@@ -17,21 +17,25 @@ public class ServiceOptionsActivity extends Activity {
 	}
 
 	public void optionsClick(View v){
-		int id = v.getId();
-		if (id == R.id.dublin) {
+		switch (v.getId()) {
+		case R.id.dublin:
 			Intent dublin = new Intent(ServiceOptionsActivity.this,  ClinicsActivity.class);
 			startActivity(dublin);
-		} else if (id == R.id.wicklow) {
+			break;
+			case R.id.wicklow:
 			Intent wicklow = new Intent(ServiceOptionsActivity.this, CalendarAntenatalClinicViewActivity.class);
 			startActivity(wicklow);
-		} else if (id == R.id.ethDublin) {
+			break;
+			case R.id.ethDublin:
 			Intent ethDublin = new Intent(ServiceOptionsActivity.this, AppoimtmentAntenatalViewActivity.class);
 			startActivity(ethDublin);
-		} else if (id == R.id.satellite) {
+			break;
+			case R.id.satellite:
 			Intent satellite = new Intent(ServiceOptionsActivity.this, SatelliteClinicViewActivity.class);
 			startActivity(satellite);
-		} else {
+			break;
 		}
+		}
+		
 	}
 
-}

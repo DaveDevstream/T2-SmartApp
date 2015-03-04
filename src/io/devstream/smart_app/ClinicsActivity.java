@@ -14,11 +14,11 @@ public class ClinicsActivity extends Activity {
 	}
 	
 	public void clinicClick(View v){
-		int id = v.getId();
-		if (id == R.id.nmh) {
+		switch (v.getId()) {
+		case R.id.nmh:
 			Intent mnh = new Intent(ClinicsActivity.this, ClinicDateActivity.class);
 			startActivity(mnh);
-		} else {
+			break;
 		}
 	}
 

@@ -7,39 +7,36 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+public class TestingDB extends Activity {
 
-
-public class TestingDB extends Activity{
-	
 	TextView tvResult;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.testing_db);
-		
-		tvResult = (TextView)findViewById(R.id.dbresult);
-		Button qdb = (Button)findViewById(R.id.querydb);
+
+		tvResult = (TextView) findViewById(R.id.dbresult);
+		Button qdb = (Button) findViewById(R.id.querydb);
 		qdb.setOnClickListener(new ClickButtonListener());
-		
-		
+
 	}
-	
+
 	private class ClickButtonListener implements View.OnClickListener {
 
 		@Override
 		public void onClick(View v) {
-			int id = v.getId();
-			if (id == R.id.querydb) {
+			switch (v.getId()) {
+			case R.id.querydb:
 				QueryDB q = new QueryDB("appointments");
 				q.getResult();
 				String hoho = q.getJaja();
 				tvResult.setText(hoho);
-				;
+				break;
 			}
-			
+
 		}
-		
+
 	}
 
 }

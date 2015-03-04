@@ -14,11 +14,11 @@ public class ClinicDateActivity  extends Activity {
 	}
 	
 	public void dateClick(View v){
-		int id = v.getId();
-		if (id == R.id.week1) {
+		switch (v.getId()) {
+		case R.id.week1:
 			Intent week1 = new Intent(ClinicDateActivity.this, ApointmentsCalendar.class);
 			startActivity(week1);
-		} else {
+			break;
 		}
 		
 	}

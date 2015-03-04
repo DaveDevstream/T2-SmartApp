@@ -14,11 +14,11 @@ public class AppointmentsActivity extends Activity {
 	}
 	
 	public void appointClick(View v){
-		int id = v.getId();
-		if (id == R.id.patient) {
+		switch(v.getId()) {
+		case R.id.patient:
 			Intent patientProfile = new Intent(AppointmentsActivity.this, ServiceUser.class);
 			startActivity(patientProfile);
-		} else {
+			break;
 		}
 	
 	}
