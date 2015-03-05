@@ -74,6 +74,16 @@
         android:layout_marginBottom="30dp"
         
         />
+    
+    <Button 
+        android:id="@+id/db_individual_testing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:text="Individual DB Testing"
+        android:layout_marginBottom="30dp"
+        
+        />
 
     <TextView
         android:id="@+id/textView6"

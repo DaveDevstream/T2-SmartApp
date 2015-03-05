@@ -2,7 +2,6 @@ package io.devstream.smart_app;
 
 //import android.support.v7.app.ActionBarActivity;
 
-
 import java.util.Locale;
 
 import android.app.Activity;
@@ -28,6 +27,7 @@ public class LoginActivity extends Activity {
 	String password;
 	private Button loginButton;
 	private Button testDB;
+	private Button indDbTest;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +40,15 @@ public class LoginActivity extends Activity {
 		String bl = getResources().getString(R.string.textsmart);
 		byline.setText(bl.toUpperCase(Locale.getDefault()));
 
-		loginButton = (Button)findViewById(R.id.loginButton);
+		loginButton = (Button) findViewById(R.id.loginButton);
 		loginButton.setOnClickListener(new ClickButtonListener());
-		
-		testDB = (Button)findViewById(R.id.test_db_button);
+
+		testDB = (Button) findViewById(R.id.test_db_button);
 		testDB.setOnClickListener(new ClickButtonListener());
 
-		
+		indDbTest = (Button) findViewById(R.id.db_individual_testing);
+		indDbTest.setOnClickListener(new ClickButtonListener());
+
 		etUsername = (EditText) findViewById(R.id.username);
 		etPassword = (EditText) findViewById(R.id.password);
 
@@ -59,43 +61,49 @@ public class LoginActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.loginButton:
 				setUserNameAndPassword();
-				//new LongOperation().execute();
-				LongOperation task = new LongOperation (CalendarsActivity.class);    
+				// new LongOperation().execute();
+				LongOperation task = new LongOperation(CalendarsActivity.class);
 				task.execute();
 				break;
 			case R.id.test_db_button:
 				setUserNameAndPassword();
-				//new LongOperation().execute((String[]) null);
-				LongOperation task2 = new LongOperation (GetAppointmentsActivity.class);    
+				// new LongOperation().execute((String[]) null);
+
+				LongOperation task2 = new LongOperation(
+						GetAppointmentsActivity.class);
 				task2.execute();
 				break;
+
+			case R.id.db_individual_testing:
+				LongOperation task3 = new LongOperation(DbTestingActivity.class);
+				task3.execute();
 			}
-			
 
 		}
-		
+
 		private class LongOperation extends AsyncTask<String, Void, String> {
 			Class aClass;
-			
-			public LongOperation(Class className){
+
+			public LongOperation(Class className) {
 				aClass = className;
 			}
-			
-			public LongOperation(){
-				
-			}
-			
+
+
 			@Override
 			protected void onPreExecute() {
 			}
 
 			protected String doInBackground(String... params) {
-				/*String authkey = HttpAuthClazz.getInstance().getAuthKey(username,password);
-				SingletonUser.getSingletonInstance().setAuthToken(authkey);*/
-				
-				SingletonUser.getSingletonInstance().setAuthToken(HttpAuthClazz.getInstance().getAuthKey(username,password));
-				
-				
+				/*
+				 * String authkey =
+				 * HttpAuthClazz.getInstance().getAuthKey(username,password);
+				 * SingletonUser.getSingletonInstance().setAuthToken(authkey);
+				 */
+
+				SingletonUser.getSingletonInstance().setAuthToken(
+						HttpAuthClazz.getInstance().getAuthKey(username,
+								password));
+
 				return HttpAuthClazz.getInstance().getResponseCode();
 			}
 
@@ -106,30 +114,38 @@ public class LoginActivity extends Activity {
 
 			@Override
 			protected void onPostExecute(String result) {
-				if(!result.equals("201")){
-					Toast.makeText(LoginActivity.this, "Login Failed, please try again", Toast.LENGTH_LONG).show();
-				}
-				else{
-					SingletonUser.getSingletonInstance().setUsername(etUsername.getText().toString());
-					SingletonUser.getSingletonInstance().setPassword(etUsername.getText().toString());
-					Toast.makeText(LoginActivity.this, "Login Success! \nAuthkey: " + SingletonUser.getSingletonInstance().getAuthToken(), Toast.LENGTH_LONG).show();
-					
-					//Intent login = new Intent(LoginActivity.this, CalendarsActivity.class);
-					//startActivity(login);
-					
-					//Intent dbtest = new Intent(LoginActivity.this, TestingDB.class);
-					//startActivity(dbtest);
-					
+				if (!result.equals("201")) {
+					Toast.makeText(LoginActivity.this,
+							"Login Failed, please try again", Toast.LENGTH_LONG)
+							.show();
+				} else {
+					SingletonUser.getSingletonInstance().setUsername(
+							etUsername.getText().toString());
+					SingletonUser.getSingletonInstance().setPassword(
+							etUsername.getText().toString());
+					Toast.makeText(
+							LoginActivity.this,
+							"Login Success! \nAuthkey: "
+									+ SingletonUser.getSingletonInstance()
+											.getAuthToken(), Toast.LENGTH_LONG)
+							.show();
+
+					// Intent login = new Intent(LoginActivity.this,
+					// CalendarsActivity.class);
+					// startActivity(login);
+
+					// Intent dbtest = new Intent(LoginActivity.this,
+					// TestingDB.class);
+					// startActivity(dbtest);
+
 					Intent dbtest = new Intent(LoginActivity.this, aClass);
 					startActivity(dbtest);
 				}
 			}
 		}
 
-		
-
 		private void setUserNameAndPassword() {
-			
+
 			username = etUsername.getText().toString();
 			password = etPassword.getText().toString();
 
