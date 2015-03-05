@@ -75,8 +75,10 @@ public class LoginActivity extends Activity {
 				break;
 
 			case R.id.db_individual_testing:
+				setUserNameAndPassword();
 				LongOperation task3 = new LongOperation(DbTestingActivity.class);
 				task3.execute();
+				break;
 			}
 
 		}

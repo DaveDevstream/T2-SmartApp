@@ -31,7 +31,7 @@
         <activity
             android:name=".AppointmentsActivity"
             android:screenOrientation="portrait" >
-t
+t
         </activity>
         <activity
             android:name=".Baby"
@@ -90,12 +90,15 @@ t
             android:name=".ApointmentsCalendar"
             android:label="@string/title_activity_apointments_calendar" >
         </activity>
-        <activity
-            android:name=".TestingDB" >
+        <activity android:name=".GetAppointmentsActivity" >
         </activity>
-            
-        <activity
-            android:name=".GetAppointmentsActivity">
+        <activity android:name=".DbTestAhmed" >
+        </activity>
+        <activity android:name=".DbTestDave" >
+        </activity>
+        <activity android:name=".DbTestGary" >
+        </activity>
+        <activity android:name=".DbTestingActivity" >
         </activity>
     </application>
 

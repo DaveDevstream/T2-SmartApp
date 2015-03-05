@@ -27,7 +27,7 @@ public class DbTestAhmed extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.db_testing_universal_view_for_list);
-		mainList = (ListView) findViewById(R.id.appointments_list_view);
+		mainList = (ListView) findViewById(R.id.db_testing_list_view);
 		mainList.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,new ArrayList<String>()));
 		new LongOperation().execute("appointments");
 	}

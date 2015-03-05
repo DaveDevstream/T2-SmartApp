@@ -16,6 +16,8 @@ public class DbTestingActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.database_testing_view);
 
 		ahmedsButton = (Button) findViewById(R.id.bt_testdb_ahmed);
 		garysButton = (Button) findViewById(R.id.bt_testdb_gary);
