@@ -17,29 +17,25 @@ public class ServiceOptionsActivity extends Activity {
 	}
 
 	public void optionsClick(View v){
-		switch(v.getId()){
+		switch (v.getId()) {
 		case R.id.dublin:
 			Intent dublin = new Intent(ServiceOptionsActivity.this,  ClinicsActivity.class);
 			startActivity(dublin);
 			break;
-		case R.id.wicklow:
+			case R.id.wicklow:
 			Intent wicklow = new Intent(ServiceOptionsActivity.this, CalendarAntenatalClinicViewActivity.class);
 			startActivity(wicklow);
 			break;
-		case R.id.ethDublin:
+			case R.id.ethDublin:
 			Intent ethDublin = new Intent(ServiceOptionsActivity.this, AppoimtmentAntenatalViewActivity.class);
 			startActivity(ethDublin);
 			break;
-		case R.id.satellite:
+			case R.id.satellite:
 			Intent satellite = new Intent(ServiceOptionsActivity.this, SatelliteClinicViewActivity.class);
 			startActivity(satellite);
 			break;
-	//	case R.id.serviceBackBtn://back button 
-	//		Intent back = new Intent(ServiceOptionsActivity.this,CalendarsActivity.class);
-	//		startActivity(back);
-			default:
-				break;
 		}
+		}
+		
 	}
 
-}

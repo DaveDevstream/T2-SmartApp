@@ -14,17 +14,11 @@ public class ClinicDateActivity  extends Activity {
 	}
 	
 	public void dateClick(View v){
-		switch(v.getId()){
+		switch (v.getId()) {
 		case R.id.week1:
 			Intent week1 = new Intent(ClinicDateActivity.this, ApointmentsCalendar.class);
 			startActivity(week1);
 			break;
-	//	case R.id.dateBack: //back button
-	//		Intent dateBack = new Intent(ClinicDateActivity.this,ClinicsActivity.class);
-	//		startActivity(dateBack);
-	//		break;
-			default:
-				break;
 		}
 		
 	}

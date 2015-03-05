@@ -8,6 +8,8 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,7 +31,7 @@
         <activity
             android:name=".AppointmentsActivity"
             android:screenOrientation="portrait" >
-t
+t
         </activity>
         <activity
             android:name=".Baby"
@@ -87,6 +89,16 @@ t
         <activity
             android:name=".ApointmentsCalendar"
             android:label="@string/title_activity_apointments_calendar" >
+        </activity>
+        <activity android:name=".GetAppointmentsActivity" >
+        </activity>
+        <activity android:name=".DbTestAhmed" >
+        </activity>
+        <activity android:name=".DbTestDave" >
+        </activity>
+        <activity android:name=".DbTestGary" >
+        </activity>
+        <activity android:name=".DbTestingActivity" >
         </activity>
     </application>
 

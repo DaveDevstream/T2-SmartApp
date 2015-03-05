@@ -14,16 +14,11 @@ public class AppointmentsActivity extends Activity {
 	}
 	
 	public void appointClick(View v){
-		switch(v.getId()){
-	//	case R.id.appointmentBack://back button
-	//		Intent appBack = new Intent(AppointmentsActivity.this, ClinicDateActivity.class);
-	//		startActivity(appBack);
+		switch(v.getId()) {
 		case R.id.patient:
 			Intent patientProfile = new Intent(AppointmentsActivity.this, ServiceUser.class);
 			startActivity(patientProfile);
 			break;
-			default:
-				break;
 		}
 	
 	}

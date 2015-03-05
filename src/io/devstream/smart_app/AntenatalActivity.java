@@ -12,23 +12,20 @@ public class AntenatalActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.service_user_antenatal_view);
 	}
-	
-	public void antenatalClick(View v){
-		switch(v.getId()){
+
+	public void antenatalClick(View v) {
+		switch (v.getId()) {
 		case R.id.antenatalProfile:
-			Intent anteProfile = new Intent(AntenatalActivity.this,ServiceUser.class);
+			Intent anteProfile = new Intent(AntenatalActivity.this,
+					ServiceUser.class);
 			startActivity(anteProfile);
 			break;
 		case R.id.postnatalActivity:
-			Intent postnatal = new Intent(AntenatalActivity.this, PostnatalActivity.class);
+			Intent postnatal = new Intent(AntenatalActivity.this,
+					PostnatalActivity.class);
 			startActivity(postnatal);
 			break;
-			default:
-				break;
 		}
 	}
-
-	
-	
 
 }

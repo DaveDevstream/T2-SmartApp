@@ -1,6 +1,5 @@
 package io.devstream.smart_app;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +13,9 @@ public class CalendarsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.calendars_view);
 	}
-	public void clicked(View v){
-		switch(v.getId()){
+
+	public void clicked(View v) {
+		switch (v.getId()) {
 		case R.id.calBack:
 			Intent back = new Intent(CalendarsActivity.this, MainActivity.class);
 			startActivity(back);
@@ -29,9 +29,7 @@ public class CalendarsActivity extends Activity {
 			//startActivity(visits);
 			break;
 			default:
-			break;
 		}
 	}
 
-	
 }

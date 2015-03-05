@@ -14,17 +14,11 @@ public class ClinicsActivity extends Activity {
 	}
 	
 	public void clinicClick(View v){
-		switch(v.getId()){
+		switch (v.getId()) {
 		case R.id.nmh:
 			Intent mnh = new Intent(ClinicsActivity.this, ClinicDateActivity.class);
 			startActivity(mnh);
 			break;
-	//	case R.id.clinicsBack:
-	//		Intent clinicBack = new Intent(ClinicsActivity.this, ServiceOptionsActivity.class);
-	//		startActivity(clinicBack);
-	//		break;
-			default:
-				break;
 		}
 	}
 
