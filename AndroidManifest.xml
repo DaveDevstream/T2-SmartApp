@@ -68,7 +68,8 @@ t
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".EditServiceUserActivity"
