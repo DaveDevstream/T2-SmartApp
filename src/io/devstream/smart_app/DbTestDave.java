@@ -107,6 +107,7 @@ public class DbTestDave extends Activity {
 
 		@Override
 		protected void onPostExecute(String result) {
+			ArrayList<Appointment> appointmentsList = new ArrayList<Appointment>();
 			try {
 				/*
 				 * JSONObject jo = new JSONObject(result); JSONArray ja =
@@ -130,7 +131,7 @@ public class DbTestDave extends Activity {
 					
 					//clinic_id
 					int clinic_id = jsonAppointment.getInt("clinic_id");
-					
+					appointment.setClinic_id(clinic_id);
 					
 					//date
 					String date = (String) jsonAppointment.get("date");
@@ -138,17 +139,23 @@ public class DbTestDave extends Activity {
 					
 					//appointment id
 					int appointmentId = (Integer) jsonAppointment.get("id");
-					appointment.setappointmentId(appointmentId);
+					appointment.setAppointmentId(appointmentId);
 					
 					//links
 					//String service_options = ((JSONObject) jsonAppointment.get("links")).getString("service_options");
 					JSONObject jsonLinks = jsonAppointment.getJSONObject("links");
 					String service_options = jsonLinks.getString("service_options");
+					appointment.setService_options(service_options);
+					
 					String service_provider = jsonLinks.getString("service_provider");
+					appointment.setService_provider(service_provider);
+					
 					String service_user = jsonLinks.getString("service_user");
+					appointment.setService_user(service_user);
 					
 					//priority
 					String priority = jsonAppointment.getString("priority");
+					appointment.setPriority(priority);
 					
 					//service_option_ids
 					
@@ -157,6 +164,8 @@ public class DbTestDave extends Activity {
 					for(int i1 = 0; i1<service_option_ids.length();i1++){
 						service_option_ids_array[i1] = service_option_ids.getInt(i1);
 					}
+					appointment.setService_option_ids(service_option_ids_array);
+					
 					//wrong
 					//int [] service_option_ids =  (int[]) jsonAppointment.get("service_option_ids");
 					
@@ -165,20 +174,25 @@ public class DbTestDave extends Activity {
 					appointment.setService_provider_id(service_provider_id);
 					
 					
-					//service_user
+					//service_user data
 					JSONObject jsonServiceUserData = jsonAppointment.getJSONObject("service_user");
 					String gestation = jsonServiceUserData.getString("gestation");
-					int serviceUserId = jsonServiceUserData.getInt("id");
-					String name = jsonServiceUserData.getString("name");
+					appointment.setGestation(gestation);
 					
-					
-					//service_user_id note:this is a duplicate from the service user data
-					int service_user_id = (Integer) jsonAppointment.get("service_user_id");
+					int service_user_id = jsonServiceUserData.getInt("id");
 					appointment.setService_user_id(service_user_id);
+					
+					String name = jsonServiceUserData.getString("name");
+					appointment.setName(name);
+					
+					//service_user_id note:this is a duplicate from the service user data and so has been commented out
+					/*int service_user_id = (Integer) jsonAppointment.get("service_user_id");
+					appointment.setService_user_id(service_user_id);*/
 					
 					
 					//time
 					String time = jsonAppointment.getString("time");
+					appointment.setTimeString(time);
 					
 					//visit logs
 					//int [] visit_logs = (int[]) jsonAppointment.get("visit_logs");
@@ -188,12 +202,15 @@ public class DbTestDave extends Activity {
 					for(int i1 = 0; i1<visit_logs.length();i1++){
 						visit_logs_array[i1] = visit_logs.getInt(i1);
 					}
-					
+					appointment.setVisit_logs(visit_logs_array);
 					
 					//visit type
 					String visit_type = jsonAppointment.getString("visit_type");
+					appointment.setVisit_type(visit_type);
 					
-					String totalinfo =
+					appointmentsList.add(appointment);
+					
+/*					String totalinfo =
 							"clinic id: "+clinic_id+"\n"
 							+"date: "+date+"\n"
 							+"appointment id: "+appointmentId+"\n"
@@ -206,14 +223,16 @@ public class DbTestDave extends Activity {
 							+"service option ids: "+Arrays.toString(service_option_ids_array)+"\n"
 							+"service provider id: "+service_provider_id+"\n"
 							+"gestation: "+gestation+"\n"
-							+"service user id: "+serviceUserId+"\n"
+							+"service user id: "+service_user_id+"\n"
 							+"name: "+name+"\n"
 							+"service user id (dupe record): "+service_user_id+"\n"
 							+"time: "+time+"\n"
 							+"visit logs array: "+Arrays.toString(visit_logs_array)+"\n"
 							+"visit type: "+visit_type;
 							
-					adapter.add(totalinfo); 
+					adapter.add(totalinfo); */
+					
+					adapter.add(appointment.toString());
 				}
 
 			} catch (JSONException e) {
