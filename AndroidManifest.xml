@@ -31,7 +31,6 @@
         <activity
             android:name=".AppointmentsActivity"
             android:screenOrientation="portrait" >
-t
         </activity>
         <activity
             android:name=".Baby"
