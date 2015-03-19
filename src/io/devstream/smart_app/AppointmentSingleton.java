@@ -26,3 +26,4 @@ public class AppointmentSingleton {
 		this.appointments = appointments;
 	}
 }
+

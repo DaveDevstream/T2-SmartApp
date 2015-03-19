@@ -37,8 +37,9 @@ public class AppointmentsGrabber{
 		this.context = context;
 		this.date = date;
 		this.clinicId = clinicId;
-		//urlSlug = "appointments?date="+this.date+"4&clinic_id="+this.clinicId;
-		urlSlug = "appointments";
+		urlSlug = "appointments?date="+this.date+"&clinic_id="+this.clinicId;
+		//urlSlug = "appointments?date=2015-03-24&clinic_id=2";
+		//urlSlug = "appointments";
 		Log.d(TAG,"attempting Long Operation with url: "+ urlSlug);
 		new LongOperation().execute(urlSlug);
 	}
