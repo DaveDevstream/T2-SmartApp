@@ -12,6 +12,7 @@ public class DbTestingActivity extends Activity {
 	Button ahmedsButton;
 	Button garysButton;
 	Button davesButton;
+	Button davesButton2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +23,12 @@ public class DbTestingActivity extends Activity {
 		ahmedsButton = (Button) findViewById(R.id.bt_testdb_ahmed);
 		garysButton = (Button) findViewById(R.id.bt_testdb_gary);
 		davesButton = (Button) findViewById(R.id.bt_testdb_dave);
+		davesButton2 = (Button) findViewById(R.id.bt_testdb_dave2);
 		
 		ahmedsButton.setOnClickListener(new ClickButtonListener());
 		garysButton.setOnClickListener(new ClickButtonListener());
 		davesButton.setOnClickListener(new ClickButtonListener());
-
+		davesButton2.setOnClickListener(new ClickButtonListener());
 	}
 
 	public class ClickButtonListener implements OnClickListener {
@@ -45,6 +47,12 @@ public class DbTestingActivity extends Activity {
 			case R.id.bt_testdb_dave:
 				Intent davesAct = new Intent(DbTestingActivity.this, DbTestDave.class);
 				startActivity(davesAct);
+				break;
+			case R.id.bt_testdb_dave2:
+				AppointmentsGrabber ag = new AppointmentsGrabber("2015-03-24",2, DbTestingActivity.this);
+				
+				/*Intent davesAct2 = new Intent(DbTestingActivity.this, DbTestDave2.class);
+				startActivity(davesAct2);*/
 				break;
 			}
 

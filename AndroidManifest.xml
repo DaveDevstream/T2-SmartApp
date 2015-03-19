@@ -101,6 +101,9 @@ t
         </activity>
         <activity android:name=".DbTestingActivity" >
         </activity>
+        <activity android:name=".DbTestDave2" >
+        </activity>
+        
     </application>
 
 </manifest>
