@@ -82,6 +82,7 @@ class AppointmentBaseAdapter extends BaseAdapter{
 		
 		Appointment singleAppointment = appointmentList.get(position);
 		
+		//time.setText(singleAppointment.getCalDateTime().getTime().toString());
 		time.setText(singleAppointment.getTimeString());
 		service_user_name.setText(singleAppointment.getName());
 		service_user_gestation.setText(singleAppointment.getGestation());
