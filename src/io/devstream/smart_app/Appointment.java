@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -15,6 +16,8 @@ public class Appointment {
 	private Date date;
 	private String dateString;
 	private int appointmentId;
+	
+	private Calendar calDateTime;
 
 	// links
 	private String service_options;
@@ -208,6 +211,27 @@ public class Appointment {
 				+"visit type: "+visit_type;
 		
 		return totalinfo;
+	}
+	
+	public void setCalDateTime(){
+		String dateTime = getDateString()+" "+getTimeString();
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = null;
+		try {
+			date = df.parse(dateTime);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calDateTime = calendar;		
+	}
+	
+	public Calendar getCalDateTime(){
+		setCalDateTime();
+		return calDateTime;
 	}
 
 }

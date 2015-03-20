@@ -6,9 +6,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,9 +21,16 @@ import org.json.JSONObject;
 
 
 
+
+
+
+
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.text.format.DateFormat;
+import android.text.format.Time;
 import android.util.Log;
 
 
@@ -180,6 +191,10 @@ public class AppointmentsGrabber{
 					
 					//time
 					String time = jsonAppointment.getString("time");
+					Log.d(TAG, "Time as String"+time);
+			
+							
+					
 					appointment.setTimeString(time);
 					
 					//visit logs
