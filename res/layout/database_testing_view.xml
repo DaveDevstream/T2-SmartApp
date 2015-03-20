@@ -27,5 +27,13 @@
         android:padding="15dp"
         android:layout_marginBottom="10dp"
         android:text="Dave Test DB" />
+    
+    <Button
+        android:id="@+id/bt_testdb_dave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Dave Test DB 2" />
 
 </LinearLayout>
