@@ -13,6 +13,7 @@ public class DbTestingActivity extends Activity {
 	Button garysButton;
 	Button davesButton;
 	Button davesButton2;
+	Button davesButton3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +25,13 @@ public class DbTestingActivity extends Activity {
 		garysButton = (Button) findViewById(R.id.bt_testdb_gary);
 		davesButton = (Button) findViewById(R.id.bt_testdb_dave);
 		davesButton2 = (Button) findViewById(R.id.bt_testdb_dave2);
+		davesButton3 = (Button) findViewById(R.id.bt_testdb_dave3);
 		
 		ahmedsButton.setOnClickListener(new ClickButtonListener());
 		garysButton.setOnClickListener(new ClickButtonListener());
 		davesButton.setOnClickListener(new ClickButtonListener());
 		davesButton2.setOnClickListener(new ClickButtonListener());
+		davesButton3.setOnClickListener(new ClickButtonListener());
 	}
 
 	public class ClickButtonListener implements OnClickListener {
@@ -53,6 +56,9 @@ public class DbTestingActivity extends Activity {
 				
 				/*Intent davesAct2 = new Intent(DbTestingActivity.this, DbTestDave2.class);
 				startActivity(davesAct2);*/
+				break;
+			case R.id.bt_testdb_dave3:
+				ServiceOptionsAndClinicsGrabber soacg = new ServiceOptionsAndClinicsGrabber(DbTestingActivity.this);
 				break;
 			}
 
