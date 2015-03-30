@@ -103,6 +103,8 @@
         <activity android:name=".DbTestDave2" >
         </activity>
         
+        <activity android:name=".ServiceOptionPickerActivity" >
+        </activity>
     </application>
 
 </manifest>
